@@ -39,5 +39,50 @@ describe('sayHello', function () {
     it('should return "Hello, World!" if passed the bool of false', function () {
         expect(sayHello(false)).toBe("Hello, World!")
     });
-
 })
+
+describe('isFive', function (){
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe("function");
+    });
+    it('should return true if number 5 is passed', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return true if the string "5" is passed', function (){
+        expect(isFive("5")).toBe(true);
+    })
+    it('should return false if any other number is passed', function () {
+        expect(isFive(9)).toBe(false)
+    });
+})
+
+describe('isEven', function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function')
+    });
+    it('should return a boolean', function () {
+        expect(typeof isEven()).toBe('boolean')
+    })
+    it('should return true if number is even', function () {
+        expect(isEven(2)).toBe(true)
+        expect(isEven(-4)).toBe(true)
+        expect(isEven(8)).toBe(true)
+    })
+    it('should return false if number is not even', function () {
+        expect(isEven(3)).toBe(false)
+        expect(isEven(101)).toBe(false)
+    });
+    it('should return false if a string is passed', function () {
+        expect(isEven("banana")).toBe(false)
+    })
+    it('should return false if passed Infinity', function (){
+        expect(isEven(Infinity)).toBe(false)
+    })
+    it('should return false if a boolean is passed', function () {
+        expect(isEven(true)).toBe(false)
+    });
+    it('should return false if no arguement is passed', function () {
+        expect(isEven()).toBe(false);
+    });
+})
+

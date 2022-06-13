@@ -30,5 +30,14 @@ describe('sayHello', function () {
     it('should return "Hello, Pat!", if passed the string of "Pat"', function () {
         expect(sayHello("Pat")).toBe('Hello, Pat!');
     });
+    it('should return "Hello, World! if no param is passed through', function () {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!", if passed the bool of true', function () {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" if passed the bool of false', function () {
+        expect(sayHello(false)).toBe("Hello, World!")
+    });
 
 })

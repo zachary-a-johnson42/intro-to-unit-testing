@@ -86,3 +86,29 @@ describe('isEven', function () {
     });
 })
 
+describe('isVowel', function (){
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function')
+    });
+    it('should return a boolean', function () {
+        expect(typeof isVowel()).toBe('boolean')
+    });
+    it('should return true if passed a vowel', function () {
+        expect(isVowel('O')).toBe(true)
+        expect(isVowel('E')).toBe(true)
+        expect(isVowel('A')).toBe(true)
+    });
+    it('should return true no matter if vowel is upper or lower case', function (){
+        expect(isVowel('a')).toBe(true)
+        expect(isVowel('e')).toBe(true)
+        expect(isVowel('u')).toBe(true)
+    })
+    it('should return false if passed a boolean', function () {
+        expect(isVowel(true)).toBe(false)
+        expect(isVowel(false)).toBe(false)
+    });
+    it('should return false if no arguement is provided', function () {
+        expect(isVowel()).toBe(false)
+    });
+})
+

@@ -112,3 +112,29 @@ describe('isVowel', function (){
     });
 })
 
+describe('add', function (){
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function')
+    });
+    it('should return 5 if given the values of 2 and 3', function () {
+        expect(add(2,3)).toBe(5)
+    });
+    it('should return -12 when given the values of -3 and -9', function () {
+        expect(add(-3,-9)).toBe(-12)
+    });
+    it('should return 11 when given the string "5" and the number 6', function () {
+        expect(add("5", 6)).toBe(11)
+    });
+    it('should return 6 when given the values "-4" and "10"', function () {
+        expect(add("-4", "10")).toBe(6)
+    });
+    it('should return NaN when given "banana" and "split"', function () {
+        expect(add("banana", "split")).toBeNaN()
+    });
+    it('should return NaN when given 2 and "apples"', function () {
+        expect(add(2,"apples")).toBeNaN()
+    });
+    it('should return NaN when given no arguments in parameters', function () {
+        expect(add()).toBeNaN()
+    });
+})

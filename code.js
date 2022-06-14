@@ -63,3 +63,7 @@ function isVowel(char){
     }
 }
 
+function add(num1,num2){
+    if(num1 === undefined && num2 === undefined) {return NaN}
+    return parseInt(num1) + parseInt(num2);
+}
